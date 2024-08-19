@@ -10,19 +10,27 @@ function Card({
     bestScore,
     setBestScore,
     setGameOver,
-    setShowGameOver,
+    setEndingMessage,
+    totalCardCount,
 }) {
     function cardClickHandler() {
         if (clickedCards.includes(name)) {
             setClickedCards([]);
             setScore(0);
             setGameOver(true);
-            setShowGameOver(true);
+            setEndingMessage("game-over");
         } else {
             setClickedCards([...clickedCards, name]);
-            setScore(score + 1);
-            if (score + 1 > bestScore) {
-                setBestScore(score + 1);
+
+            const newScore = score + 1;
+            setScore(newScore);
+            if (newScore > bestScore) {
+                setBestScore(newScore);
+            }
+
+            if (newScore === totalCardCount) {
+                setGameOver(true);
+                setEndingMessage("game-won");
             }
         }
     }

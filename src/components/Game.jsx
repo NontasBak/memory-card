@@ -12,7 +12,7 @@ function Game({
     setBestScore,
     gameOver,
     setGameOver,
-    setShowGameOver,
+    setEndingMessage,
 }) {
     const [isLoading, setIsLoading] = useState(true);
     const [data, setData] = useState([]);
@@ -92,7 +92,8 @@ function Game({
                             bestScore={bestScore}
                             setBestScore={setBestScore}
                             setGameOver={setGameOver}
-                            setShowGameOver={setShowGameOver}
+                            setEndingMessage={setEndingMessage}
+                            totalCardCount={cardCount}
                         />
                     );
                 })

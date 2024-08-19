@@ -10,7 +10,7 @@ function App() {
     const [bestScore, setBestScore] = useState(0);
     const [gameOver, setGameOver] = useState(true);
     const [difficulty, setDifficulty] = useState(null);
-    const [showGameOver, setShowGameOver] = useState(false);
+    const [endingMessage, setEndingMessage] = useState(null);
 
     return (
         <div className="app">
@@ -20,7 +20,8 @@ function App() {
                     <StartingScreen
                         setDifficulty={setDifficulty}
                         setGameOver={setGameOver}
-                        showGameOver={showGameOver}
+                        endingMessage={endingMessage}
+                        setScore={setScore}
                     />
                 ) : (
                     <Game
@@ -31,7 +32,7 @@ function App() {
                         setBestScore={setBestScore}
                         gameOver={gameOver}
                         setGameOver={setGameOver}
-                        setShowGameOver={setShowGameOver}
+                        setEndingMessage={setEndingMessage}
                     />
                 )}
             </main>
