@@ -1,0 +1,21 @@
+.header {
+    min-height: 10vh;
+    background-color: rgb(194, 194, 194);
+    padding: 1rem;
+
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.score-container {
+    margin-left: auto;
+}
+
+/* .title-container {
+} */
+
+.pikachu-image {
+    width: 8rem;
+    height: 8rem;
+}

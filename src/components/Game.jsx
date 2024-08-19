@@ -1,11 +1,22 @@
 import Card from "./Card";
+import "../styles/game.css";
 import { useEffect, useState } from "react";
 import getPokemon from "../utils/data.js";
 import { v4 as uuidv4 } from "uuid";
 
-function Game({ difficulty }) {
+function Game({
+    difficulty,
+    score,
+    setScore,
+    bestScore,
+    setBestScore,
+    gameOver,
+    setGameOver,
+    setShowGameOver,
+}) {
     const [isLoading, setIsLoading] = useState(true);
     const [data, setData] = useState([]);
+    const [clickedCards, setClickedCards] = useState([]);
 
     let cardCount;
     const pokemon = getPokemon(difficulty);
@@ -61,17 +72,27 @@ function Game({ difficulty }) {
         });
     }, []);
 
+    const shuffledData = [...data].sort(() => Math.random() - 0.5);
+
     return (
         <div className="game">
             {isLoading ? (
                 <h1>Loading...</h1>
             ) : (
-                data.map((item) => {
+                shuffledData.map((item) => {
                     return (
                         <Card
                             key={item.id}
                             name={item.name}
                             imageUrl={item.imageUrl}
+                            clickedCards={clickedCards}
+                            setClickedCards={setClickedCards}
+                            score={score}
+                            setScore={setScore}
+                            bestScore={bestScore}
+                            setBestScore={setBestScore}
+                            setGameOver={setGameOver}
+                            setShowGameOver={setShowGameOver}
                         />
                     );
                 })
