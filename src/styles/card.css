@@ -11,11 +11,6 @@
     transition: background-color 0.3s;
 }
 
-.card:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    cursor: pointer;
-}
-
 .card img {
     width: 90%;
     height: 90%;
@@ -25,4 +20,11 @@
 .pokemon-name {
     font-size: 1.5rem;
     color: rgba(255, 255, 255, 0.873);
+}
+
+@media (hover: hover) {
+    .card:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+        cursor: pointer;
+    }
 }
