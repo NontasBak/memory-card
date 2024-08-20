@@ -1,0 +1,18 @@
+:root {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.app {
+    background-image: url("../assets/pokemon-background.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center; */
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}

@@ -1,12 +1,13 @@
 import "../styles/header.css";
 import pikachuImage from "../assets/pikachu-image.png";
+import title from "../assets/title.png";
 
 function Header({ score, bestScore }) {
     return (
         <div className="header">
             <img src={pikachuImage} alt="Pikachu" className="pikachu-image" />
             <div className="title-container">
-                <h1 className="title">Poke Memory</h1>
+                <img src={title} alt="Poke Memory" className="title" />
                 <h2 className="description">
                     Don't click the same card twice!
                 </h2>

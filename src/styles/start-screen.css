@@ -1,0 +1,40 @@
+.start-screen {
+    font-size: 4rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 3px solid yellow;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.difficulty-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.difficulty-buttons button {
+    font-size: 2rem;
+    font-weight: 500;
+    background-color: rgb(38, 101, 168);
+    border: 2px solid rgb(0, 0, 0);
+    color: yellow;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.select-difficulty {
+    color: yellow;
+}
+
+.difficulty-buttons button:hover {
+    background-color: yellow;
+    color: rgb(38, 101, 168);
+    cursor: pointer;
+}

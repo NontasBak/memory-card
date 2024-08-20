@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Game from "./Game";
+import "../styles/start-screen.css";
 
 function StartingScreen({
     setDifficulty,
@@ -28,7 +29,7 @@ function StartingScreen({
                     </div>
                 )
             )}
-            <h1>Select Difficulty</h1>
+            <h1 className="select-difficulty">Select Difficulty:</h1>
             <div className="difficulty-buttons">
                 <button onClick={startScreenButtonHandler}>Easy</button>
                 <button onClick={startScreenButtonHandler}>Medium</button>
