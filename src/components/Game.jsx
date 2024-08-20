@@ -45,11 +45,9 @@ function Game({
                 `https://pokeapi.co/api/v2/pokemon/${pokemon[i]}`
             );
             const data = await response.json();
-            // const imageUrl = data.sprites.front_default;
             const imageUrl =
                 data.sprites.other["official-artwork"].front_default;
             newData.push({ name: pokemon[i], imageUrl, id: uuidv4() });
-            console.log(data, imageUrl);
         }
 
         return newData;
@@ -66,7 +64,6 @@ function Game({
 
             Promise.all(UrlPromises).then(() => {
                 setData(data);
-                // console.log(data);
                 setIsLoading(false);
             });
         });
@@ -75,9 +72,9 @@ function Game({
     const shuffledData = [...data].sort(() => Math.random() - 0.5);
 
     return (
-        <div className="game">
+        <div className={"game " + (isLoading ? "is-loading" : "loaded")}>
             {isLoading ? (
-                <h1>Loading...</h1>
+                <h1 className="loading">Loading...</h1>
             ) : (
                 shuffledData.map((item) => {
                     return (

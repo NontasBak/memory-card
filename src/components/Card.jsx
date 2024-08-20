@@ -38,6 +38,7 @@ function Card({
     return (
         <button className="card" onClick={cardClickHandler}>
             <img src={imageUrl} alt={name} className="pokemon" />
+            <h3 className="pokemon-name">{name}</h3>
         </button>
     );
 }

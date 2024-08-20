@@ -10,9 +10,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     /* background-position: center; */
-    height: 100vh;
+    min-height: 100vh;
 
     display: flex;
     flex-direction: column;
     gap: 5rem;
+}
+
+@media (max-height: 1100px) {
+    .app {
+        gap: 2rem;
+    }
 }

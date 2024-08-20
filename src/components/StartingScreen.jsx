@@ -1,5 +1,3 @@
-import { useState } from "react";
-import Game from "./Game";
 import "../styles/start-screen.css";
 
 function StartingScreen({
@@ -18,7 +16,7 @@ function StartingScreen({
         <div className="start-screen">
             {endingMessage === "game-over" ? (
                 <div className="game-over">
-                    <h1>Game Over</h1>
+                    <h1>You lost :(</h1>
                     <p>Try Again?</p>
                 </div>
             ) : (

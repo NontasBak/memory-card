@@ -13,8 +13,8 @@ function Header({ score, bestScore }) {
                 </h2>
             </div>
             <div className="score-container">
-                <h3 className="score">Score: {score}</h3>
                 <h4 className="best-score">Best Score: {bestScore}</h4>
+                <h3 className="score">Score: {score}</h3>
             </div>
         </div>
     );

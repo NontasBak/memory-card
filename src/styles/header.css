@@ -1,5 +1,5 @@
 .header {
-    min-height: 10vh;
+    /* min-height: 10vh; */
     background-color: rgba(199, 189, 226, 0.2);
     padding: 1rem;
     border-bottom: 3px solid rgb(203, 203, 255);
@@ -52,4 +52,26 @@
 .pikachu-image {
     width: 10rem;
     height: 100%;
+}
+
+@media (max-width: 724px) {
+    .pikachu-image {
+        width: 5rem;
+        height: auto;
+        display: none;
+    }
+
+    .description {
+        font-size: 1.1rem;
+    }
+
+    .score-container {
+        font-size: 1.3rem;
+        /* width: 50%; */
+    }
+
+    .title {
+        height: 3rem;
+        width: auto;
+    }
 }

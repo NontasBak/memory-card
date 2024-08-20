@@ -38,3 +38,13 @@
     color: rgb(38, 101, 168);
     cursor: pointer;
 }
+
+.game-over,
+.game-won {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    font-size: 3rem;
+}
