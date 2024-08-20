@@ -35,10 +35,12 @@ function Card({
         }
     }
 
+    const nameCapitalized = name.charAt(0).toUpperCase() + name.slice(1);
+
     return (
         <button className="card" onClick={cardClickHandler}>
             <img src={imageUrl} alt={name} className="pokemon" />
-            <h3 className="pokemon-name">{name}</h3>
+            <h3 className="pokemon-name">{nameCapitalized}</h3>
         </button>
     );
 }
